@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import calculation_1
+from calculation_1 import add, sub, mul, div
 a = 10
 b = 5
-resultA = calculation_1.add(a, b)
-resultS = calculation_1.sub(a, b)
-resultM = calculation_1.mul(a, b)
-resultD = calculation_1.div(a, b)
+resultA = add(a, b)
+resultS = sub(a, b)
+resultM = mul(a, b)
+resultD = div(a, b)
 if __name__ == "__main__":
     print("{} + {} = {}".format(a, b, resultA))
     print("{} - {} = {}".format(a, b, resultS))
