@@ -3,4 +3,8 @@
 
 
 class square:
-    pass """ this is placeholder and means do nothing"""
+    """this is the class that defines a square"""
+
+
+    pass
+    """ this is placeholder and means do nothing"""
