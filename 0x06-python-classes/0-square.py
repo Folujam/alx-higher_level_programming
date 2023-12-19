@@ -4,7 +4,7 @@ this class defines a square with no instantiation
 """
 
 
-class square:
+class Square:
     """
     this is the class that defines a square
     """
