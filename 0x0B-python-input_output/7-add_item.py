@@ -3,7 +3,6 @@
 load, add, save
 """
 import sys
-import os
 import json
 
 
@@ -13,6 +12,8 @@ def load_from_json_file(filename):
     """
     with open(filename, "r") as afile:
         return json.load(afile)
+
+
 def save_to_json_file(my_obj, filename):
     """
     function that writes an Object to a text file
@@ -20,9 +21,10 @@ def save_to_json_file(my_obj, filename):
     with open(filename, "w", encoding="utf-8") as afile:
         json.dump(my_obj, afile)
 
-if os.path.exists('add_item.json'):
-    load_from_json_file('add_item.json')
-else:
+
+try:
+    mlist = load_from_json_file('add_item.json')
+except FileNotFoundError:
     mlist = []
 for i in range(1, len(sys.argv)):
     mlist.append(sys.argv[i])
