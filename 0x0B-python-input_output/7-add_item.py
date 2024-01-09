@@ -4,9 +4,21 @@ load, add, save
 """
 import sys
 import os
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+import json
 
+
+def load_from_json_file(filename):
+    """
+     creates an Object from a “JSON file”
+    """
+    with open(filename, "r") as afile:
+        return json.load(afile)
+def save_to_json_file(my_obj, filename):
+    """
+    function that writes an Object to a text file
+    """
+    with open(filename, "w", encoding="utf-8") as afile:
+        json.dump(my_obj, afile)
 
 if os.path.exists('add_item.json'):
     load_from_json_file('add_item.json')
