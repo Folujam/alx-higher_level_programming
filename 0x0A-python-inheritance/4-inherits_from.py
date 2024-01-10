@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-only sub class of 
+only sub class of
 """
 
 
