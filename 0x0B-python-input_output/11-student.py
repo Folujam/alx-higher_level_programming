@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-student to JSON with filter
+student to disk and reload
 """
 
 
@@ -28,3 +28,12 @@ class Student:
             return {i: getattr(self, i) for i in attrs if hasattr(self, i)}
         else:
             return vars(self)
+
+    def reload_from_json(self, json):
+        """
+        In this code, setattr(self, key, value) sets the attribute key
+        of the object self to value. The for loop goes through each key-value
+        pair in the json dictionary.
+        """
+        for key, value in json.items():
+            setattr(self, key, value)
