@@ -21,13 +21,14 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
+
 class Rectangle(BaseGeometry):
     """
     rectangle de inherit BG
     """
     def __init__(self, width, height):
         """
-        In this code, self.integer_validator("width", width) 
+        In this code, self.integer_validator("width", width)
         and self.integer_validator("height", height) call the
         integer_validator method to validate width and height,
         and self.__width = width and self.__height = height assign
