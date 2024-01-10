@@ -21,7 +21,7 @@ def save_to_json_file(my_obj, filename):
     with open(filename, "w", encoding="utf-8") as afile:
         json.dump(my_obj, afile)
 
-
+filename = "add_item.json"
 try:
     mlist = load_from_json_file('add_item.json')
 except FileNotFoundError:
