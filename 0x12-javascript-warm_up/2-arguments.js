@@ -1,9 +1,11 @@
 #!/usr/bin/node
 /* prints argument availability status */
-const numargs = process.argv.lenght;
-if (numargs <= 2) {
+
+const numargs = process.argv.length - 2;
+
+if (numargs === 0) {
   console.log('No argument');
-} else if (numargs === 3) {
+} else if (numargs === 1) {
   console.log('Argument found');
 } else {
   console.log('Arguments found');
