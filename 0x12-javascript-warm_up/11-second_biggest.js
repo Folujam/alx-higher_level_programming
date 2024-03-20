@@ -8,5 +8,5 @@ if (list.length < 2) {
 } else {
   list.sort((a, b) => a - b);
   bignum = list[list.length - 2];
+  console.log(bignum);
 }
-console.log(bignum);
