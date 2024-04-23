@@ -12,7 +12,7 @@ request(reqURL, (error, response, body) => {
     const results = jso['results'];
     let count = 0;
     for (let i = 0; i < results.length; i++) {
-      const chars = (results[i]['characters']);
+      let chars = (results[i]['characters']);
       for (let j = 0; j < chars.length; j++) {
         let check18 = chars[j].endsWith('18/');
         if (check18) {
