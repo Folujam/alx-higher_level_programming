@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import doctest
-doctest.testfile("0-add_integer.txt")
 
 """
 this is to add two integers and nothing else
