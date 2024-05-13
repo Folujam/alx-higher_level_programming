@@ -49,11 +49,11 @@ class Rectangle:
     def print(self):
         if self.width is 0 or self.height is 0:
             return ''
-        for _ in range(self.width):
+        for _ in self.width:
             print('#'.repeat(self.height))
 
     def str(self):
         if self.width is 0 or self.height is 0:
             return ''
-        for _ in range(self.width):
+        for _ in self.width:
             print('#'.repeat(self.height))
