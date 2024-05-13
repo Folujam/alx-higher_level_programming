@@ -48,7 +48,7 @@ class Rectangle:
 
     def __str__(self):
         str_rp = ''
-        if self.width is not 0 and self.height is not 0:
+        if self.width is not 0 or self.height is not 0:
             for _ in range(self.height):
-                str_rp += '#' * self.width
+                str_rp += '\n'.join('#' * self.width)
         return str_rp
