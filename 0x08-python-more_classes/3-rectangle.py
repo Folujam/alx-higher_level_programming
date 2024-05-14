@@ -50,5 +50,5 @@ class Rectangle:
         str_rp = ''
         if self.width is not 0 or self.height is not 0:
             for _ in range(self.height):
-                str_rp += '#' * self.widths + '\n'
+                str_rp += '#' * self.width + '\n'
         return str_rp
