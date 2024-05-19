@@ -6,6 +6,7 @@ a square module that inherites basegeometry
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """this class(sqr) inherites from rectangle and uses the area
     and integer_validator method"""
