@@ -3,6 +3,7 @@
 rectangle inherits from basegeometry
 """
 
+
 class BaseGeometry:
     """
     public instances method and exception
