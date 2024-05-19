@@ -13,7 +13,7 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """inits positive size && uses int_vali to ensure its int"""
-        self.__size = abs(size)
+        self.__size = size
         super().integer_validator('size', size)
 
     def area(self):
