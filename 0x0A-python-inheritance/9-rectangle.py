@@ -6,6 +6,7 @@ rectangle inherits from basegeometry
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     rectangle de inherit BG
