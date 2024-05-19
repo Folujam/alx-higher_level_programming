@@ -3,7 +3,6 @@
 rectangle inherits from basegeometry
 """
 
-
 class BaseGeometry:
     """
     public instances method and exception
@@ -15,11 +14,11 @@ class BaseGeometry:
         """
         raise Exception("area() is not implemented")
 
-    def integer_validation(self, name, value):
-        if type(value) is not int:
-            raise TypeError(f"{name} must be an integer")
+    def integer_validator(self, name, value):
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
@@ -34,7 +33,7 @@ class Rectangle(BaseGeometry):
         and self.__width = width and self.__height = height assign
         these values to private instance variables
         """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+        if self.integer_validator("width", width):
+            self.__width = width
+        if self.integer_validator("height", height):
+            self.__height = height
