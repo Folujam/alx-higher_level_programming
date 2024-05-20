@@ -28,13 +28,9 @@ class Rectangle(BaseGeometry):
     """
     def __init__(self, width, height):
         """
-        In this code, self.integer_validator("width", width)
-        and self.integer_validator("height", height) call the
-        integer_validator method to validate width and height,
-        and self.__width = width and self.__height = height assign
-        these values to private instance variablessu
+        In this, width and height are initialized integer_validator() makes 
+        sure width and height are integers and positive numbers.
         """
-        super().__init__()
         super().integer_validator("width", width)
         super().integer_validator("height", height)
         self.__width = width
