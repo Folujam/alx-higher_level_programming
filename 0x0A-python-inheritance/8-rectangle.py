@@ -34,7 +34,7 @@ class Rectangle(BaseGeometry):
         and self.__width = width and self.__height = height assign
         these values to private instance variablessu
         """
-        super().__init__(self)
+        super().__init__()
         super().integer_validator("width", width)
         super().integer_validator("height", height)
         self.__width = width
