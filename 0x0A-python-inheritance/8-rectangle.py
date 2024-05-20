@@ -32,8 +32,9 @@ class Rectangle(BaseGeometry):
         and self.integer_validator("height", height) call the
         integer_validator method to validate width and height,
         and self.__width = width and self.__height = height assign
-        these values to private instance variables
+        these values to private instance variablessu
         """
+        super().__init__(self)
         super().integer_validator("width", width)
         super().integer_validator("height", height)
         self.__width = width
