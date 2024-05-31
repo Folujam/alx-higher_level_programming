@@ -100,7 +100,7 @@ class Rectangle(Base):
         """returns print of str"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.x, self.y, self.widht, self.height)
-    
+
     def update(self, *args, **kwargs):
         """updates elem in attr"""
         if args and len(args) > 0:
