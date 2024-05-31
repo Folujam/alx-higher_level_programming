@@ -12,7 +12,8 @@ class Rectangle(Base):
     child(Rectangle) inherits for parent(Base)
     """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """initializing parameters(attributes) listed above
+        """
+        initializing parameters(attributes) listed above
         """
         super().__init__(id)
         self.__width = width
@@ -22,10 +23,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """private to public"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """setter for width attr"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -35,10 +38,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """private to public"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """setter for height attr"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -48,10 +53,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """private to public"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """setter for x"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -61,10 +68,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """private to public"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """setter for y"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -73,9 +82,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """returns area of rectangle"""
         return self.width * self.height
 
     def display(self):
+        """displays elem in attr"""
         for _ in range(self.y):
             print()
         for _ in range(self.height):
@@ -86,10 +97,12 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}" \
+        """returns print of str"""
+        return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.x, self.y, self.widht, self.height)
     
     def update(self, *args, **kwargs):
+        """updates elem in attr"""
         if args and len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]
