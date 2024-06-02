@@ -13,7 +13,7 @@ class Square(Rectangle):
     Rectangle(Base)
     """
     def __init__(self, size, x=0, y=0, id=None):
-        super().__init__(id, x, y, width=size, height=size)
+        super().__init__(id, x, y, size, size)
 
     def __str__(self):
         """returns str info for square"""
