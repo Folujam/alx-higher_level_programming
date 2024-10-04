@@ -16,7 +16,7 @@ class Square(Rectangle):
         """
         initializing parameters(attributes) listed above
         """
-        super().__init__(id, x, y, width=size, height=size)
+        super(Square, self).__init__(size, size, x, y, id)
 
     def __str__(self):
         """returns str info for square"""
@@ -32,3 +32,4 @@ class Square(Rectangle):
     def size(self, size):
         self.width = size
         self.height = size
+
