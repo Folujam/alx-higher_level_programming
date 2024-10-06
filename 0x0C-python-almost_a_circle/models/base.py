@@ -26,4 +26,6 @@ class Base:
         """method returns the JSON string rep of arg"""
         if list_dictionaries is not None or len(list_dictionaries) != 0:
             return json.dumps(list_dictionaries)
-        return "[]"
+        else:
+            list_dictionaries = []
+            return list_dictionaries
