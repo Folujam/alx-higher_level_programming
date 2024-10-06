@@ -120,5 +120,16 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-        """updates class to return dictionary representation"""
-        return self.__dict__
+        """updates class to return dictionary representation
+        return self.__dict__ 
+        return ((key, value) for key, value in self.__dict__.items()
+        both implentations can simply be used but due to
+        positional params and _dict_ naming convention
+        """
+        return {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "height": self.height,
+            "width": self.width
+        }
